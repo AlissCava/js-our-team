@@ -39,3 +39,19 @@ teamMembers.forEach(member => {
     console.log(`Nome: ${member.nome}, Ruolo: ${member.ruolo}, Foto: ${member.foto}`);
   });
 
+// Milestone 2: Stampare le stesse informazioni su DOM sotto forma di stringhe
+const teamListElement = document.getElementById('team-list');
+
+// Itera attraverso ogni membro del team
+teamMembers.forEach(member => {
+    // Crea un nuovo elemento paragrafo per ogni membro del team
+    const memberInfo = document.createElement('p');
+  
+    // Assegna al testo del paragrafo le informazioni del membro attuale
+    memberInfo.textContent = `Nome: ${member.nome}, Ruolo: ${member.ruolo}, Foto: ${member.foto}`;
+  
+    // Aggiungi il paragrafo al div con id 'team-list' nel tuo HTML
+    teamListElement.appendChild(memberInfo);
+    // Nota: Assicurati che nel tuo HTML esista un elemento con id 'team-list' dove verranno aggiunti i paragrafi
+  });
+  
